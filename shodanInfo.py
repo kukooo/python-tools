@@ -6,11 +6,11 @@ import socket
 import argparse
 from shodan import Shodan
 
-parser = argparse.ArgumentParser(description='Busca informacion de una lista de dominios que se le pasa')
-parser.add_argument('-f', '--file', help='Fichero con un dominio por linea', required=True)
-parser.add_argument('-H', '--hostnames', help='Muestra los \'Hostnames\' que se encuentran para una IP', required=False,action="store_true")
-parser.add_argument('-d', '--domains', help='Muestra los \'Domains\' que se encuentran para una IP', required=False,action="store_true")
-parser.add_argument('-c', '--cve', help='Muestra los \'CVEs\' que se encuentran para una IP', required=False,action="store_true")
+parser = argparse.ArgumentParser(description='Search domains info')
+parser.add_argument('-f', '--file', help='File with a domain per line', required=True)
+parser.add_argument('-H', '--hostnames', help='Shows \'Hostnames\' that finds for an IP', required=False,action="store_true")
+parser.add_argument('-d', '--domains', help='Shows \'Domains\' that finds for an IP', required=False,action="store_true")
+parser.add_argument('-c', '--cve', help='Shows \'CVEs\' that finds for an IP', required=False,action="store_true")
 args = parser.parse_args()
 
 api = Shodan(os.environ['shodanAPI'])
