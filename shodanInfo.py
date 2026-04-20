@@ -1,9 +1,9 @@
+#!/usr/bin/env python
 import os
 import re
 import socket
 import argparse
 from shodan import Shodan
-
 
 def is_ip(addr: str) -> bool:
     """Check if string is a valid IPv4 address."""
